@@ -1,0 +1,106 @@
+#*********************************************************************
+#
+#   NAME:
+#       .gitignore
+#
+#   DESCRIPTION:
+#       This file specifies intentionally untracked files that Git
+#       should ignore.
+#
+#   NOTES:
+#       http://www.kernel.org/pub/software/scm/git/docs/gitignore.html
+#
+#       Shell glob documentation:
+#           http://man7.org/linux/man-pages/man7/glob.7.html
+#
+#   PLEASE KEEP ENTRIES IN ALPHABETICAL ORDER WITHIN EACH SECTION
+#
+#*********************************************************************
+
+#---------------------------------------------------------------------
+# File extensions to be ignored anywhere in the tree
+#---------------------------------------------------------------------
+# Temp files created by many text editors
+*~
+# Bullseye coverage files
+*.cov
+# IOP_defs generated files
+*.buf
+*.cnt
+*.gen
+*.lut
+*.pri
+*.stc
+# Log files
+*.log
+# IntelliSense database (non-compiled browse)
+*.ncb
+# Compiled object files
+*.o
+*.o16
+*.o32
+# Merge files created by Git
+*.orig
+# Pre-compiled headers
+*.pch
+# Byte compiled Python modules
+*.py[cod]
+# Visual Studio Solution User Options
+*.suo
+# vim swap files
+.*.swp
+.swp
+# Temporary files
+*.tmp
+*.temp
+# Visual Studio user files
+*.vcproj.*.user
+*.vcxproj.*.user
+
+# Visual Studio binary resource script file
+# see: https://msdn.microsoft.com/en-us/library/fywbdhak.aspx
+*.aps
+
+#---------------------------------------------------------------------
+# File extensions to be ignored at specific locations in the tree
+#
+# NOTE: Asterisks (*) DO NOT match across directories.  Intermediate
+# directories must be explicitly aliased, ex: /foo/*/*/*.bar
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+# Explicit files to ignore (only matches one)
+#---------------------------------------------------------------------
+/git_changes.txt
+
+#---------------------------------------------------------------------
+# Directories to ignore
+#
+# NOTE: Do not add trailing slashes, they skip symlinks
+#---------------------------------------------------------------------
+# Cached StarTeam view information
+.sbas/*
+**/pipcache/*
+**/venv/*
+# Test results
+**docs/*
+unittest_{envname}.xml
+**/vnv/test_results/*
+# Build directories
+**/bin/*
+**/.venv
+**/.idea
+**/.vscode
+**/.history
+cluster_update/id_rsa
+**/.tox
+**/.coverage
+**/htmlcov
+**/coverage.xml
+**/unittest.xml
+**/.tox
+**/*.egg-info
+bash_utils
+**/anchore_images
+**/docker_info.properties
+__pycache__

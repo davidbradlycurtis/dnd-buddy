@@ -1,0 +1,53 @@
+#*********************************************************************
+#
+#   NAME:
+#       .gitattributes
+#
+#   DESCRIPTION:
+#       This file specifies how certain files should be handled with
+#       respect to EOL and differencing.
+#
+#   NOTES:
+#       http://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
+#
+#   PLEASE KEEP ENTRIES IN ALPHABETICAL ORDER WITHIN EACH SECTION
+#
+#*********************************************************************
+
+#---------------------------------------------------------------------
+# Set default behavior, in case users don't have core.autocrlf set
+#---------------------------------------------------------------------
+*           text eol=lf
+
+#---------------------------------------------------------------------
+# Declare files that will always have CRLF line endings on checkout
+#---------------------------------------------------------------------
+# Windows batch files
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+# Visual Studio solution files
+*.sln       text eol=crlf
+# Visual Studio project files
+*.vcproj    text eol=crlf
+*.vcxproj   text eol=crlf
+
+#---------------------------------------------------------------------
+# Declare files that will always have LF line endings on checkout
+#---------------------------------------------------------------------
+# Boost.build executable script
+bjam        text eol=lf
+b2          text eol=lf
+# Bullseye coverage file
+*.cov       text eol=lf -diff
+# Boost.build jam build specification file
+*.jam       text eol=lf
+# Shell script
+*.sh        text eol=lf
+# TCL/TK language script
+*.tcl       text eol=lf
+
+#---------------------------------------------------------------------
+# Denote all files that are truly binary and should not be modified
+#---------------------------------------------------------------------
+# Bitmap files
+*.bmp       binary
